@@ -21,7 +21,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from flask import Flask, Response, flash, redirect, render_template_string, request, url_for
 
 APP_TITLE = "Technician Command Center"
-APP_VERSION = "Step 14.1 - Clean Data Controls"
+APP_VERSION = "Step 14.3 - Navigation Link Behavior Fix"
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -2955,15 +2955,15 @@ BASE_TEMPLATE = """
 </header>
 
 <nav>
-    <a href="{{ url_for('dashboard') }}" target="_blank" rel="noopener noreferrer">Dashboard</a>
-    <a href="{{ url_for('portfolio_demo') }}" target="_blank" rel="noopener noreferrer">Portfolio Demo</a>
-    <a href="{{ url_for('run_snapshot') }}" target="_blank" rel="noopener noreferrer">Run Snapshot</a>
-    <a href="{{ url_for('snapshots') }}" target="_blank" rel="noopener noreferrer">Snapshot History</a>
-    <a href="{{ url_for('compare') }}" target="_blank" rel="noopener noreferrer">Compare</a>
-    <a href="{{ url_for('reports') }}" target="_blank" rel="noopener noreferrer">Reports</a>
-    <a href="{{ url_for('deployment_guide') }}" target="_blank" rel="noopener noreferrer">Deployment Guide</a>
-    <a href="{{ url_for('portfolio_readiness') }}" target="_blank" rel="noopener noreferrer">Portfolio Readiness</a>
-    <a href="{{ url_for('health') }}" target="_blank" rel="noopener noreferrer">Health</a>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    <a href="{{ url_for('portfolio_demo') }}">Portfolio Demo</a>
+    <a href="{{ url_for('run_snapshot') }}">Run Snapshot</a>
+    <a href="{{ url_for('snapshots') }}">Snapshot History</a>
+    <a href="{{ url_for('compare') }}">Compare</a>
+    <a href="{{ url_for('reports') }}">Reports</a>
+    <a href="{{ url_for('deployment_guide') }}">Deployment Guide</a>
+    <a href="{{ url_for('portfolio_readiness') }}">Portfolio Readiness</a>
+    <a href="{{ url_for('health') }}">Health</a>
 </nav>
 
 <main>
