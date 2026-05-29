@@ -3258,10 +3258,25 @@ def deployment_guide() -> str:
         </div>
 
         <div class="card" style="margin-top:16px;">
+            <h3>How to Get the Code</h3>
+            <p>
+                To run the local technician version, first get the project files from the GitHub repository. The recommended method is to clone the repository:
+            </p>
+            <pre>git clone https://github.com/EngJasmine/technician-command-center.git
+cd technician-command-center</pre>
+            <p>
+                If Git is not installed, you can also open the GitHub repository in a browser, choose <strong>Code &gt; Download ZIP</strong>, extract the folder, and open it in PyCharm or VS Code.
+            </p>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
             <h3>Recommended Local Run Commands</h3>
+            <p>
+                After cloning or downloading the project, run these commands from inside the project folder:
+            </p>
             <pre>python -m venv venv
 venv\\Scripts\\activate
-python -m pip install Flask==3.0.3
+python -m pip install -r requirements.txt
 python app.py</pre>
             <p class="small muted">SQLite is created automatically in the data folder. No external database is required for this portfolio version.</p>
         </div>
@@ -3284,7 +3299,7 @@ python app.py</pre>
             <h3>Portfolio Deployment Checklist</h3>
             <ul>
                 <li>Keep <strong>app.py</strong> and <strong>requirements.txt</strong> in the project root.</li>
-                <li>Use <strong>Flask==3.0.3</strong> in requirements.txt.</li>
+                <li>Use <strong>Flask==3.0.3</strong> and <strong>gunicorn==22.0.0</strong> in requirements.txt.</li>
                 <li>Set <strong>TCC_DEMO_ONLY=1</strong> for the public hosted version.</li>
                 <li>Open the Portfolio Demo page and seed demo data before taking screenshots.</li>
                 <li>Show in the README that Local Mode collects real diagnostics only when run on the technician's machine.</li>
