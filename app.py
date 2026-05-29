@@ -4729,6 +4729,10 @@ def server_error(error: Exception) -> Tuple[str, int]:
     return page(content, title="Server Error"), 500
 
 
+# Initialize SQLite when the app is imported by production servers such as Gunicorn.
+# Local execution also uses the same initialized database.
+init_db()
+
+
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True)
