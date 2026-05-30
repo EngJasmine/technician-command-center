@@ -21,7 +21,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from flask import Flask, Response, flash, redirect, render_template_string, request, url_for
 
 APP_TITLE = "Technician Command Center"
-APP_VERSION = "Step 14.3 - Navigation Link Behavior Fix"
+APP_VERSION = "Step 14.5 - Health Route Hidden From Main Navigation"
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -2963,7 +2963,6 @@ BASE_TEMPLATE = """
     <a href="{{ url_for('reports') }}">Reports</a>
     <a href="{{ url_for('deployment_guide') }}">Deployment Guide</a>
     <a href="{{ url_for('portfolio_readiness') }}">Portfolio Readiness</a>
-    <a href="{{ url_for('health') }}">Health</a>
 </nav>
 
 <main>
